@@ -1,0 +1,47 @@
+{
+  "lang": "fr",
+  "todo": "[À compléter]",
+  "navTargets": [
+    "services",
+    "cas",
+    "formules",
+    "methode",
+    "audit",
+    "faq"
+  ],
+  "menuLabel": "Menu",
+  "homeLabel": "Accueil",
+  "siretLabel": "SIRET",
+  "backHome": "← Retour à l'accueil",
+  "legalLinks": [
+    {
+      "label": "Mentions légales",
+      "href": "/mentions-legales"
+    },
+    {
+      "label": "Confidentialité",
+      "href": "/confidentialite"
+    }
+  ],
+  "toolLogos": {
+    "Gmail / Outlook": [
+      "gmail",
+      "mail"
+    ],
+    "Google Calendar": [
+      "googlecalendar"
+    ],
+    "WhatsApp": [
+      "whatsapp"
+    ],
+    "Google Sheets": [
+      "googlesheets"
+    ],
+    "Notion": [
+      "notion"
+    ],
+    "Supabase": [
+      "supabase"
+    ]
+  }
+}

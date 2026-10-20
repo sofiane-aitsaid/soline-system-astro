@@ -1,0 +1,56 @@
+---
+import Txt from './Txt.astro';
+import { f, split } from '../lib/content';
+const d = f('formules');
+const plans = d.plans ?? [];
+---
+<section id="formules" class="section dark">
+  <div class="container">
+    <header class="head">
+      {d.eyebrow && <p class="eyebrow">{d.eyebrow}</p>}
+      {d.title && <h2>{d.title}</h2>}
+      {d.intro && <p class="lead">{d.intro}</p>}
+    </header>
+    <div class="grid-3 plans">
+      {plans.map((p: any) => (
+        <article class:list={['plan', { rec: p.rec }]}>
+          {p.rec && <span class="star" aria-hidden="true">★</span>}
+          <h3>{p.name}</h3>
+          {p.sub && <p class="psub">{p.sub}</p>}
+          {p.price?.trim() && <p class="price">{p.price}</p>}
+          <ul class="items">{split(p.items, '\n').map((it) => <li><Txt text={it} /></li>)}</ul>
+          {p.limit && <p class="limit">{p.limit}</p>}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .dark { background: var(--ink); color: #fff; }
+  .dark .lead { color: rgb(255 255 255 / 0.75); }
+  .dark .eyebrow { color: var(--ink); }
+  .plans { align-items: stretch; }
+  .plan { position: relative; padding: 28px; border: 2px solid rgb(255 255 255 / 0.85); border-radius: var(--radius); display: flex; flex-direction: column; }
+  .plan.rec { background: var(--bg); color: var(--ink); border-color: var(--ink); box-shadow: 6px 6px 0 var(--pop); }
+  .star { position: absolute; top: -18px; right: 20px; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--pop); color: var(--ink); border: 2px solid var(--ink); font-size: 1.1rem; transform: rotate(10deg); }
+  .plan h3 { font-size: 1.6rem; margin: 0 0 6px; }
+  .psub { margin: 0 0 16px; font-weight: 600; color: rgb(255 255 255 / 0.75); }
+  .rec .psub { color: var(--muted); }
+  .price { font-family: var(--font-display); font-weight: 800; font-size: 2rem; margin: 0 0 16px; }
+  .items { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 10px; }
+  .items li { position: relative; padding-left: 28px; }
+  .items li::before { content: '✓'; position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 6px; display: grid; place-items: center; font-size: 0.75rem; font-weight: 800; background: var(--pop); color: var(--ink); }
+  /* Survol : la carte se soulève, s'incline légèrement et son ombre jaune grandit. */
+  .plan { transition: transform 0.25s cubic-bezier(.2,.8,.3,1.4), box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease; }
+  .plan .star { transition: transform 0.35s cubic-bezier(.2,.8,.3,1.6); }
+  .plan .items li::before { transition: transform 0.25s ease; }
+  .plan:hover { transform: translate(-4px, -8px) rotate(-0.6deg); border-color: var(--pop); box-shadow: 10px 12px 0 var(--pop); background-color: rgb(255 255 255 / 0.04); }
+  .plan.rec:hover { border-color: var(--ink); background-color: #fff; box-shadow: 12px 14px 0 var(--pop); }
+  .plan:hover .star { transform: rotate(-12deg) scale(1.2); }
+  .plan:hover .items li::before { transform: scale(1.15) rotate(-6deg); }
+  @media (prefers-reduced-motion: reduce) {
+    .plan:hover, .plan:hover .star, .plan:hover .items li::before { transform: none; }
+  }
+  .limit { margin: auto 0 0; padding-top: 16px; border-top: 1px dashed currentColor; font-size: 0.9rem; opacity: 0.8; }
+</style>

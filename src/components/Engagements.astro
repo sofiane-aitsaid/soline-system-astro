@@ -1,0 +1,30 @@
+---
+import Txt from './Txt.astro';
+import { f, fill } from '../lib/content';
+const d = f('engagements');
+const items = (d.items ?? []).filter((i: any) => i.title || i.text);
+---
+<section id="engagements" class="section">
+  <div class="container">
+    <header class="head">
+      {d.eyebrow && <p class="eyebrow">{d.eyebrow}</p>}
+      {d.title && <h2>{d.title}</h2>}
+    </header>
+    <div class="grid-3">
+      {items.map((it: any) => (
+        <article class="card eng">
+          <span class="check" aria-hidden="true">✓</span>
+          <h3><Txt text={fill(it.title)} /></h3>
+          <p><Txt text={fill(it.text)} /></p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .eng { padding: 26px; background: #fff; }
+  .check { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--pop); border: 2px solid var(--ink); font-weight: 800; margin-bottom: 16px; }
+  .eng h3 { font-size: 1.25rem; margin: 0 0 8px; }
+  .eng p { margin: 0; color: var(--muted); }
+</style>

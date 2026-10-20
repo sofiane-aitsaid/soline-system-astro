@@ -1,0 +1,102 @@
+{
+  "mentions": {
+    "title": "Mentions légales",
+    "intro": "Informations prévues par l'article 6-III de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN).",
+    "updated": "Dernière mise à jour : [date]",
+    "sections": [
+      {
+        "title": "Éditeur du site",
+        "items": [
+          "Nom commercial : {brand}",
+          "Dénomination sociale ou nom et prénom de l'entrepreneur : [À compléter]",
+          "Forme juridique : [À compléter : EI, micro-entreprise, SASU, SARL…]",
+          "Capital social : [À compléter si société]",
+          "Adresse du siège : [À compléter]",
+          "SIRET : [À compléter]",
+          "Immatriculation (RNE / RCS) : [À compléter]",
+          "N° de TVA intracommunautaire : [À compléter ou « TVA non applicable, art. 293 B du CGI »]",
+          "Téléphone : {phone}",
+          "E-mail : {email}"
+        ]
+      },
+      {
+        "title": "Directeur de la publication",
+        "items": ["[Nom et prénom du directeur de la publication]"]
+      },
+      {
+        "title": "Hébergeur",
+        "items": [
+          "Raison sociale : [Nom de l'hébergeur]",
+          "Adresse : [Adresse de l'hébergeur]",
+          "Téléphone : [Téléphone de l'hébergeur]"
+        ]
+      },
+      {
+        "title": "Propriété intellectuelle",
+        "items": [
+          "Les textes, visuels et éléments graphiques de ce site sont la propriété de [titulaire des droits], sauf mention contraire. Toute reproduction sans autorisation est interdite."
+        ]
+      },
+      {
+        "title": "Données personnelles",
+        "items": ["Le traitement de vos données est décrit dans la page Confidentialité."]
+      }
+    ]
+  },
+  "confidentialite": {
+    "title": "Politique de confidentialité",
+    "intro": "Cette page explique quelles données personnelles sont traitées via ce site et comment exercer vos droits, conformément au Règlement général sur la protection des données (RGPD).",
+    "updated": "Dernière mise à jour : [date]",
+    "sections": [
+      {
+        "title": "Responsable du traitement",
+        "items": [
+          "[Nom et prénom ou dénomination sociale], [adresse]",
+          "Contact : {email}"
+        ]
+      },
+      {
+        "title": "Données traitées",
+        "items": [
+          "[Liste des données collectées, par exemple : nom, e-mail, téléphone, nom de l'entreprise, informations saisies lors de la prise de rendez-vous]"
+        ]
+      },
+      {
+        "title": "Finalités et bases légales",
+        "items": [
+          "[Finalité 1, par exemple : organiser le rendez-vous demandé] : [base légale, par exemple : mesures précontractuelles]",
+          "[Finalité 2] : [base légale]"
+        ]
+      },
+      {
+        "title": "Prise de rendez-vous",
+        "items": [
+          "Les rendez-vous sont réservés via un service tiers (Calendly). Les données saisies sont traitées par ce prestataire selon ses propres conditions. [Préciser le prestataire, sa localisation et les garanties de transfert hors Union européenne]"
+        ]
+      },
+      {
+        "title": "Durées de conservation",
+        "items": ["[Durée de conservation pour chaque catégorie de données]"]
+      },
+      {
+        "title": "Destinataires et sous-traitants",
+        "items": [
+          "[Liste des destinataires : hébergeur du site, outil de prise de rendez-vous, messagerie, outils d'automatisation…]"
+        ]
+      },
+      {
+        "title": "Cookies",
+        "items": [
+          "Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience. Les polices de caractères sont servies depuis le site lui-même. [À mettre à jour si un outil de mesure d'audience est ajouté]"
+        ]
+      },
+      {
+        "title": "Vos droits",
+        "items": [
+          "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données. Pour les exercer, écrivez à {email}.",
+          "Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr)."
+        ]
+      }
+    ]
+  }
+}

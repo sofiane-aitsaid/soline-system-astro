@@ -1,0 +1,61 @@
+---
+import * as simpleIcons from 'simple-icons';
+import { f, ui } from '../lib/content';
+
+const d = f('outils');
+const items: string[] = (d.items ?? []).map((s: string) => s.trim()).filter(Boolean);
+
+// Icône générique pour les outils sans logo disponible (ex. Outlook).
+const MAIL = { path: 'M2 5h20v14H2zm2 2v.5l8 5.5 8-5.5V7zm16 3.2-8 5.4-8-5.4V17h16z', hex: '12161C' };
+const logosByName = ui.toolLogos as Record<string, string[]>;
+const iconFor = (slug: string) => {
+  if (slug === 'mail') return MAIL;
+  const key = 'si' + slug.charAt(0).toUpperCase() + slug.slice(1);
+  return (simpleIcons as Record<string, any>)[key] ?? null;
+};
+const tools = items.map((name) => ({
+  name,
+  icons: (logosByName[name] ?? []).map(iconFor).filter(Boolean),
+}));
+---
+{tools.length > 0 && (
+  <section id="outils" class="outils">
+    <div class="container">
+      {d.label && <p class="label">{d.label}</p>}
+    </div>
+    <div class="marquee">
+      <div class="track">
+        {[0, 1].map((copy) => (
+          <ul aria-hidden={copy === 1 ? 'true' : undefined}>
+            {tools.map((t) => (
+              <li>
+                {t.icons.map((ic: any) => (
+                  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill={`#${ic.hex}`}><path d={ic.path} /></svg>
+                ))}
+                <span>{t.name}</span>
+              </li>
+            ))}
+          </ul>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  .outils { background: var(--ink); color: #fff; padding: 22px 0 24px; border-bottom: 2px solid var(--ink); overflow: hidden; }
+  .label { margin: 0 0 14px; font-weight: 700; color: var(--pop); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; }
+  .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .track { display: flex; width: max-content; animation: defile 28s linear infinite; }
+  .marquee:hover .track { animation-play-state: paused; }
+  ul { list-style: none; display: flex; gap: 14px; margin: 0; padding: 4px 14px 8px 0; }
+  li { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; background: #fff; color: var(--ink); border: 2px solid var(--ink); border-radius: 999px; padding: 8px 18px 8px 12px; font-weight: 700; font-size: 0.95rem; box-shadow: 3px 3px 0 var(--pop); }
+  svg { flex: none; }
+  @keyframes defile { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee { -webkit-mask-image: none; mask-image: none; }
+    .track { width: auto; animation: none; padding: 0 24px; }
+    ul { flex-wrap: wrap; padding-right: 0; }
+    ul[aria-hidden] { display: none; }
+  }
+</style>

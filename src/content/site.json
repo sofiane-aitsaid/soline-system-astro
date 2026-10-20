@@ -1,0 +1,302 @@
+{
+  "brand": {
+    "accent": "#2546E8",
+    "name": "Soline System",
+    "pop": "#FFD23F"
+  },
+  "globalNote": "",
+  "sections": [
+    {
+      "f": {
+        "cta": "Réserver 30 min",
+        "links": [
+          "Services",
+          "Cas d'usage",
+          "Formules",
+          "Méthode",
+          "Audit gratuit",
+          "FAQ"
+        ]
+      },
+      "id": "nav",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "badge": "Audit offert",
+        "cta1": "Prendre rendez-vous",
+        "cta2": "Calculer mes heures perdues",
+        "eyebrow": "Automatisation IA · TPE & PME · ",
+        "flowTitle": "Nouvelle demande · il y a 2 min",
+        "hl": "Plus d'ambition.",
+        "reassure": "30 minutes · sans engagement · le compte rendu d'audit vous reste",
+        "steps": [
+          {
+            "text": "« Bonjour, possible d'avoir un devis et un passage jeudi ? »",
+            "title": "Formulaire de contact"
+          },
+          {
+            "text": "Demande de devis · prioritaire · coordonnées complètes",
+            "title": "Triée par l'IA"
+          },
+          {
+            "text": "Sans ressaisie, avec l'historique du client",
+            "title": "Fiche créée dans votre CRM"
+          },
+          {
+            "text": "Créneau pris dans votre agenda",
+            "title": "Rendez-vous proposé jeudi 10 h"
+          }
+        ],
+        "sub": "On branche l'IA sur les outils que vous utilisez déjà : chaque demande client reçoit une réponse, chaque devis est relancé, chaque rendez-vous se cale tout seul. Sans changer vos habitudes.",
+        "t1": "Moins d'opérations.",
+        "t2": ""
+      },
+      "id": "hero",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "items": [
+          "Gmail / Outlook",
+          "Google Calendar",
+          "WhatsApp",
+          "Google Sheets",
+          "Notion",
+          "Supabase",
+          ""
+        ],
+        "label": "Branché sur vos outils"
+      },
+      "id": "outils",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "cards": [
+          {
+            "text": "E-mails, formulaires, messages : chaque demande reçoit une réponse personnalisée, est triée et atterrit dans votre CRM, même le dimanche soir.",
+            "title": "Demandes traitées en minutes"
+          },
+          {
+            "text": "Devis sans réponse, factures en retard, clients à recontacter : le bon message part au bon moment, signé de votre nom.",
+            "title": "Devis et relances qui partent seuls"
+          },
+          {
+            "text": "Votre client choisit un créneau libre, reçoit confirmation et rappel. Vous, vous voyez juste le rendez-vous dans l'agenda.",
+            "title": "Rendez-vous calés sans téléphone"
+          }
+        ],
+        "extra": "Aussi : avis Google, saisie de données, assistant IA pour vos équipes, centralisation entre vos logiciels, reporting hebdo.",
+        "eyebrow": "Ce qu'on automatise",
+        "forLabel": "Pour qui",
+        "intro": "On commence toujours par la tâche qui vous coûte le plus d'heures. Une à la fois, chiffrée avant d'être construite.",
+        "sectors": [
+          "Artisans & bâtiment",
+          "Garages",
+          "Cabinets",
+          "Agences immobilières",
+          "Commerces",
+          "Services B2B"
+        ],
+        "title": "Les trois fuites de temps de toute petite entreprise"
+      },
+      "id": "services",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "cards": [
+          {
+            "tags": "E-mails, Assistant IA",
+            "text": "Réponse aux demandes entrantes, tri par priorité, création de la fiche contact.",
+            "title": "Le standard qui ne dort jamais"
+          },
+          {
+            "tags": "Relances, Devis",
+            "text": "Suivi automatique des devis envoyés jusqu'à la signature.",
+            "title": "Le relanceur de devis"
+          },
+          {
+            "tags": "Agenda, SMS / e-mail",
+            "text": "Créneaux proposés, confirmations, rappels, puis demande d'avis Google après le rendez-vous.",
+            "title": "L'agenda en libre-service"
+          }
+        ],
+        "disclaimer": "Systèmes types décrivant le fonctionnement de nos automatisations. Ce ne sont pas des références clients.",
+        "emptyCard": "Votre entreprise ici",
+        "eyebrow": "Cas d'usage",
+        "title": "Trois systèmes, prêts à adapter à votre entreprise"
+      },
+      "id": "cas",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "eyebrow": "Nos engagements",
+        "items": [
+          {
+            "text": "On se branche sur ce que vous utilisez déjà. Chaque automatisation est livrée documentée.",
+            "title": "Vos outils restent les vôtres"
+          },
+          {
+            "text": "",
+            "title": "Données de vos clients protégées"
+          },
+          {
+            "text": "L'audit mesure les heures perdues. Si le gain ne couvre pas le prix, on vous le dit.",
+            "title": "Le gain chiffré avant de payer"
+          }
+        ],
+        "title": "Vous gardez la main. Toujours."
+      },
+      "id": "engagements",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "eyebrow": "Formules",
+        "intro": "Tarif communiqué après l'audit, selon le gain mesuré.",
+        "plans": [
+          {
+            "items": "Audit de vos tâches répétitives\nUne automatisation sur la fuite n°1\nCorrection sous 2 jours ouvrés",
+            "limit": "Pas d'assistant IA conversationnel.",
+            "name": "Démarrage",
+            "price": "",
+            "rec": false,
+            "sub": "1 automatisation · livrée en 1 semaine"
+          },
+          {
+            "items": "Demandes, devis et rendez-vous couverts\nCorrection sous 1 jour ouvré\nPoint de suivi à 30 jours",
+            "limit": "Pas de nouvelles automatisations après livraison.",
+            "name": "Croissance",
+            "price": "",
+            "rec": true,
+            "sub": "Jusqu'à 4 automatisations + interface · 2 à 3 semaines"
+          },
+          {
+            "items": "2 nouvelles automatisations par mois\nPriorité \nPlaces limitées pour tenir ce délai",
+            "limit": "Nombre de clients Premium plafonné.",
+            "name": "Premium",
+            "price": "",
+            "rec": false,
+            "sub": "Cartographie 2 jours · 4 à 6 semaines"
+          }
+        ],
+        "title": "Trois façons de commencer"
+      },
+      "id": "formules",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "eyebrow": "Méthode",
+        "steps": [
+          {
+            "text": "On liste vos tâches répétitives et on chiffre les heures perdues. Le compte rendu vous reste.",
+            "title": "Audit (30 min)"
+          },
+          {
+            "text": "On construit sur vos outils, on teste sur vos vrais dossiers, vous validez avant la mise en route.",
+            "title": "Construction"
+          },
+          {
+            "text": "On surveille, on corrige, on mesure le temps réellement gagné le premier mois.",
+            "title": "Suivi"
+          }
+        ],
+        "title": "De l'appel à l'automatisation en ligne"
+      },
+      "id": "methode",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "eyebrow": "Un interlocuteur, pas un call center",
+        "stack": "n8n  · API · Claude · Airtable · Google Calendar · Hermes Agent",
+        "text": "Je construis vos automatisations moi-même, sur n8n. Vous avez mon numéro, et c'est moi qui réponds. ",
+        "title": "Sofiane, fondateur de Soline System"
+      },
+      "id": "fondateur",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "cta": "Faire mon audit gratuit →",
+        "eyebrow": "Audit gratuit · 3 minutes",
+        "text": "8 questions sur vos demandes clients, vos devis et vos rendez-vous. Vous recevez une estimation des heures récupérables et les deux premières tâches à automatiser.",
+        "title": "Combien d'heures votre entreprise perd-elle chaque semaine ?"
+      },
+      "id": "audit",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "eyebrow": "FAQ",
+        "items": [
+          {
+            "a": "Non. On se branche sur ce que vous utilisez. Si un outil ne permet aucune connexion, on vous le dit dès l'audit.",
+            "q": "Faut-il changer de logiciels ?"
+          },
+          {
+            "a": "Elle répond aux questions simples et prépare le terrain. Tout ce qui engage l'entreprise (prix, devis, réclamation) remonte à un humain.",
+            "q": "L'IA va-t-elle répondre à la place de mon équipe ?"
+          },
+          {
+            "a": "Une semaine pour une première automatisation, deux à trois pour un ensemble complet.",
+            "q": "Combien de temps avant que ça tourne ?"
+          },
+          {
+            "a": "Le suivi mensuel inclut la surveillance et la correction, avec un délai défini dans chaque formule.",
+            "q": "Que se passe-t-il si une automatisation casse ?"
+          },
+          {
+            "a": "Si votre équipe refait les mêmes tâches chaque semaine (répondre, saisir, relancer, planifier), oui. L'audit le confirme en 30 minutes.",
+            "q": "Mon secteur est-il concerné ?"
+          },
+          {
+            "a": "Oui, à distance partout en France. Sur place dans la métropole lyonnaise.",
+            "q": "Intervenez-vous hors de Lyon ?"
+          }
+        ],
+        "title": "Vos questions, nos réponses"
+      },
+      "id": "faq",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "cal": "https://calendly.com/soline-system/30min",
+        "cta": "Choisir un créneau",
+        "text": "30 minutes pour repérer ce qui vous fait perdre le plus de temps. Sans engagement, sans discours commercial.",
+        "title": "Parlons de votre entreprise"
+      },
+      "id": "rdv",
+      "note": "",
+      "visible": true
+    },
+    {
+      "f": {
+        "address": "",
+        "email": "soline.systems@gmail.com",
+        "phone": "+33 6 52 14 47 89",
+        "siret": "",
+        "tagline": "Automatisation IA pour les TPE et PME. "
+      },
+      "id": "footer",
+      "note": "",
+      "visible": true
+    }
+  ]
+}

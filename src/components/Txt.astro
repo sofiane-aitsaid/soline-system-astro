@@ -1,0 +1,6 @@
+---
+// Affiche un texte en masquant les champs entre crochets ([À compléter], [date]…) : ils restent en blanc.
+const { text = '' } = Astro.props as { text?: string };
+const clean = String(text).replace(/\s*\[[^\]]*\]/g, '').trim();
+---
+{clean}

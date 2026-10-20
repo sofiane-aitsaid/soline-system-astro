@@ -1,0 +1,35 @@
+---
+import { f } from '../lib/content';
+const d = f('faq');
+const items = (d.items ?? []).filter((i: any) => i.q);
+---
+<section id="faq" class="section">
+  <div class="container faq-grid">
+    <header class="head">
+      {d.eyebrow && <p class="eyebrow">{d.eyebrow}</p>}
+      {d.title && <h2>{d.title}</h2>}
+    </header>
+    <div class="list">
+      {items.map((it: any) => (
+        <details class="card qa">
+          <summary>{it.q}<span class="ic" aria-hidden="true"></span></summary>
+          <p>{it.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
+  .list { display: grid; gap: 14px; }
+  .qa { background: #fff; padding: 0; box-shadow: 4px 4px 0 var(--ink); }
+  summary { list-style: none; cursor: pointer; padding: 18px 22px; display: flex; justify-content: space-between; gap: 16px; align-items: center; font-weight: 700; font-size: 1.05rem; }
+  summary::-webkit-details-marker { display: none; }
+  .ic { flex: none; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--ink); position: relative; background: var(--pop); }
+  .ic::before, .ic::after { content: ''; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; background: var(--ink); transform: translate(-50%, -50%); }
+  .ic::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform 0.2s; }
+  .qa[open] .ic::after { transform: translate(-50%, -50%) rotate(0deg); }
+  .qa p { margin: 0; padding: 0 22px 20px; color: var(--muted); }
+  @media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; gap: 24px; } }
+</style>

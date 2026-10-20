@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Outils from '../components/Outils.astro';
+import Services from '../components/Services.astro';
+import Cas from '../components/Cas.astro';
+import Engagements from '../components/Engagements.astro';
+import Formules from '../components/Formules.astro';
+import Methode from '../components/Methode.astro';
+import Fondateur from '../components/Fondateur.astro';
+import Audit from '../components/Audit.astro';
+import Faq from '../components/Faq.astro';
+import Rdv from '../components/Rdv.astro';
+import Footer from '../components/Footer.astro';
+import { brand, sections, f } from '../lib/content';
+
+// Un id de section = un composant. L'ordre et la visibilité viennent de site.json.
+const components: Record<string, any> = {
+  hero: Hero, outils: Outils, services: Services, cas: Cas, engagements: Engagements,
+  formules: Formules, methode: Methode, fondateur: Fondateur, audit: Audit, faq: Faq, rdv: Rdv,
+};
+const visible = sections.filter((s) => s.visible);
+const body = visible.filter((s) => components[s.id]);
+const hasNav = visible.some((s) => s.id === 'nav');
+const hasFooter = visible.some((s) => s.id === 'footer');
+
+const hero = f('hero');
+const title = [brand.name, [hero.t1, hero.hl, hero.t2].filter(Boolean).join(' ')].filter(Boolean).join(' · ');
+---
+<Layout title={title} description={hero.sub}>
+  {hasNav && <Nav />}
+  <main>
+    {body.map((s) => { const C = components[s.id]; return <C />; })}
+  </main>
+  {hasFooter && <Footer />}
+</Layout>

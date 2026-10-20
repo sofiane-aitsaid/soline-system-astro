@@ -1,0 +1,30 @@
+---
+import { f, split } from '../lib/content';
+const d = f('fondateur');
+const stack = split(d.stack, '·');
+const initial = (d.title ?? '').trim().charAt(0);
+---
+<section id="fondateur" class="section">
+  <div class="container">
+    <article class="card founder">
+      {initial && <div class="mono" aria-hidden="true">{initial}</div>}
+      <div>
+        {d.eyebrow && <p class="eyebrow">{d.eyebrow}</p>}
+        {d.title && <h2>{d.title}</h2>}
+        {d.text && <p class="lead">{d.text}</p>}
+        {stack.length > 0 && <ul class="chips">{stack.map((s) => <li>{s}</li>)}</ul>}
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .founder { display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; padding: 36px; background: #fff; }
+  .mono { width: 140px; height: 140px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--pop); border: 2px solid var(--ink); box-shadow: var(--shadow); font-family: var(--font-display); font-weight: 800; font-size: 4rem; }
+  h2 { margin: 14px 0 10px; }
+  .lead { margin: 0 0 20px; }
+  @media (max-width: 700px) {
+    .founder { grid-template-columns: 1fr; padding: 24px; gap: 20px; }
+    .mono { width: 88px; height: 88px; font-size: 2.6rem; }
+  }
+</style>

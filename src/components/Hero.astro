@@ -1,0 +1,128 @@
+---
+import Txt from './Txt.astro';
+import { f, fill, calUrl, isVisible } from '../lib/content';
+const d = f('hero');
+const steps = (d.steps ?? []).filter((s: any) => s.title || s.text);
+
+// Typographie française : espace insécable avant ? ! : ; » et après «.
+const typo = (t: string) => t.replace(/ ([?!:;»])/g, '\u00a0$1').replace(/« /g, '«\u00a0');
+
+// Pictogrammes des étapes, dans l'ordre : message reçu, tri IA, fiche CRM, rendez-vous.
+const ICONS = [
+  '<path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/>',
+  '<path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M18.5 14.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8z"/>',
+  '<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="11" r="2.2"/><path d="M5.5 16.5c.7-1.5 1.8-2.2 3-2.2s2.3.7 3 2.2M14 10h4.5M14 13.5h3"/>',
+  '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4M9 14.5l2 2 4-4"/>',
+];
+---
+<section id="hero" class="hero bg-dots">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><Txt text={fill(d.eyebrow)} /></p>
+      <h1>
+        <span class="t1">{d.t1}</span>
+        {d.hl && <span class="hl">{d.hl}</span>} {d.t2}
+      </h1>
+      {d.sub && <p class="sub">{d.sub}</p>}
+      <div class="ctas">
+        {d.cta1 && <a class="btn btn-primary" href={calUrl} target="_blank" rel="noopener">{d.cta1}</a>}
+        {d.cta2 && <a class="btn btn-light" href={isVisible('audit') ? '#audit' : '#rdv'}>{d.cta2}</a>}
+      </div>
+      {d.reassure && <p class="reassure">{d.reassure}</p>}
+    </div>
+
+    {steps.length > 0 && (
+      <div class="hero-card card">
+        {d.badge && <span class="badge">{d.badge}</span>}
+        <div class="win-bar" aria-hidden={d.flowTitle ? undefined : 'true'}>
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          {d.flowTitle && <p class="flow-title"><span class="live" aria-hidden="true"></span>{d.flowTitle}</p>}
+        </div>
+        <ol class="flow">
+          {steps.map((s: any, i: number) => {
+            const text = typo(s.text ?? '');
+            const chips = text.includes('·') ? text.split('·').map((c: string) => c.trim()).filter(Boolean) : [];
+            const quote = text.startsWith('«');
+            return (
+              <li class:list={['step', { last: i === steps.length - 1 }]} style={`--i:${i}`}>
+                <span class="ico" aria-hidden="true">
+                  {ICONS[i] ? <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={ICONS[i]} /> : i + 1}
+                  <span class="n">{i + 1}</span>
+                </span>
+                <div class="body">
+                  <strong>{typo(s.title ?? '')}</strong>
+                  {chips.length > 0 ? (
+                    <ul class="mini-chips">{chips.map((c: string, k: number) => <li class:list={[{ hot: k === 1 }]}>{c}</li>)}</ul>
+                  ) : quote ? (
+                    <span class="bubble">{text}</span>
+                  ) : (
+                    text && <span class="txt">{text}</span>
+                  )}
+                </div>
+                {i === steps.length - 1 && <span class="done" aria-hidden="true">✓</span>}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .hero { padding: calc(var(--nav-h) + 72px) 0 88px; border-bottom: 2px solid var(--ink); }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+  h1 { font-size: clamp(2.5rem, 6vw, 4.6rem); line-height: 1.02; margin: 18px 0 22px; }
+  .t1 { display: block; }
+  .hl { display: inline-block; background: var(--pop); border: 2px solid var(--ink); border-radius: 14px; padding: 0 0.22em; box-shadow: 4px 4px 0 var(--ink); transform: rotate(-1.5deg); margin: 0.08em 0.04em 0.08em 0; }
+  .sub { font-size: 1.15rem; color: var(--muted); max-width: 36em; margin: 0 0 30px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+  .reassure { margin-top: 18px; font-size: 0.92rem; color: var(--muted); }
+  .hero-card { position: relative; padding: 0 22px 22px; background: #fff; overflow: visible; }
+  .win-bar { display: flex; align-items: center; gap: 14px; margin: 0 -22px 20px; padding: 14px 120px 14px 20px; border-bottom: 2px solid var(--ink); background: var(--bg); border-radius: 14px 14px 0 0; }
+  .dots { display: inline-flex; gap: 6px; flex: none; }
+  .dots i { width: 11px; height: 11px; border-radius: 50%; border: 2px solid var(--ink); background: #fff; }
+  .dots i:nth-child(1) { background: #FF6B5E; } .dots i:nth-child(2) { background: var(--pop); } .dots i:nth-child(3) { background: #1FB860; }
+  .badge { position: absolute; z-index: 2; top: -34px; right: -22px; width: 104px; height: 104px; border-radius: 50%; display: grid; place-items: center; text-align: center; padding: 12px; background: var(--pop); border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; line-height: 1.1; transform: rotate(10deg); }
+  .flow-title { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 0.88rem; margin: 0; }
+  .live { position: relative; width: 10px; height: 10px; border-radius: 50%; background: #1FB860; border: 2px solid var(--ink); flex: none; }
+  .live::after { content: ''; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid #1FB860; animation: ping 1.8s ease-out infinite; }
+
+  .flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+  .step { display: grid; grid-template-columns: 44px 1fr auto; gap: 14px; align-items: center; padding: 12px 14px; border: 2px solid var(--ink); border-radius: 12px; background: var(--bg); position: relative; animation: arrive 0.5s cubic-bezier(.2,.8,.3,1.3) both; animation-delay: calc(var(--i) * 0.45s + 0.2s); }
+  /* Liaison entre étapes : pointillés + point qui descend (la donnée circule) */
+  .step:not(.last)::before { content: ''; position: absolute; left: 35px; top: 100%; height: 18px; border-left: 2px dashed var(--ink); }
+  .step:not(.last)::after { content: ''; position: absolute; left: 32px; top: 100%; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); border: 1.5px solid var(--ink); animation: flow 1.6s ease-in-out infinite; animation-delay: calc(var(--i) * 0.4s); z-index: 1; }
+  .ico { position: relative; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: #fff; color: var(--ink); border: 2px solid var(--ink); box-shadow: 2px 2px 0 var(--ink); }
+  .step:nth-child(2) .ico { background: var(--pop); }
+  .n { position: absolute; top: -9px; left: -9px; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 0.7rem; }
+  .body { min-width: 0; display: grid; gap: 6px; }
+  .body strong { font-size: 0.98rem; line-height: 1.25; }
+  .txt { font-size: 0.88rem; color: var(--muted); line-height: 1.4; }
+  .bubble { position: relative; justify-self: start; font-size: 0.86rem; line-height: 1.4; background: #fff; border: 2px solid var(--ink); border-radius: 12px 12px 12px 4px; padding: 7px 11px; font-style: italic; }
+  .mini-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; }
+  .mini-chips li { font-size: 0.76rem; font-weight: 700; padding: 2px 9px; border: 1.5px solid var(--ink); border-radius: 999px; background: #fff; }
+  .mini-chips li.hot { background: #FF6B5E; color: #fff; }
+  .step.last { background: var(--accent); color: #fff; }
+  .step.last .txt { color: rgb(255 255 255 / 0.85); }
+  .step.last .ico { background: #fff; }
+  .done { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--pop); color: var(--ink); border: 2px solid var(--ink); font-weight: 800; animation: pop 0.45s cubic-bezier(.2,.8,.3,1.8) both; animation-delay: calc(var(--i) * 0.45s + 0.65s); }
+
+  @keyframes arrive { from { opacity: 0; transform: translateY(12px) scale(0.97); } to { opacity: 1; transform: none; } }
+  @keyframes pop { from { opacity: 0; transform: scale(0) rotate(-45deg); } to { opacity: 1; transform: none; } }
+  @keyframes ping { from { opacity: 0.9; transform: scale(0.6); } to { opacity: 0; transform: scale(1.6); } }
+  @keyframes flow { 0% { transform: translateY(-4px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(14px); opacity: 0; } }
+
+  @media (max-width: 900px) {
+    .hero { padding-top: calc(var(--nav-h) + 48px); }
+    .hero-grid { grid-template-columns: 1fr; gap: 64px; }
+    .badge { right: 6px; width: 92px; height: 92px; font-size: 0.85rem; }
+    .win-bar { padding-right: 104px; }
+  }
+  @media (max-width: 420px) {
+    .step { grid-template-columns: 40px 1fr; }
+    .ico { width: 40px; height: 40px; }
+    .step:not(.last)::before { left: 33px; } .step:not(.last)::after { left: 30px; }
+    .done { position: absolute; right: -10px; top: -12px; }
+  }
+</style>

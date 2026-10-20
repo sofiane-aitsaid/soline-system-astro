@@ -1,0 +1,44 @@
+---
+import { f, calUrl } from '../lib/content';
+const d = f('cas');
+const cards = d.cards ?? [];
+const tags = (s: string) => (s ?? '').split(',').map((t) => t.trim()).filter(Boolean);
+---
+<section id="cas" class="section bg-grid">
+  <div class="container">
+    <header class="head">
+      {d.eyebrow && <p class="eyebrow">{d.eyebrow}</p>}
+      {d.title && <h2>{d.title}</h2>}
+    </header>
+    <div class="grid-4">
+      {cards.map((c: any) => (
+        <article class="card case">
+          <ul class="tags">{tags(c.tags).map((t) => <li>{t}</li>)}</ul>
+          <h3>{c.title}</h3>
+          <p>{c.text}</p>
+        </article>
+      ))}
+      {d.emptyCard && (
+        <a class="card case empty" href={calUrl} target="_blank" rel="noopener">
+          <span class="plus" aria-hidden="true">+</span>
+          <h3>{d.emptyCard}</h3>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      )}
+    </div>
+    {d.disclaimer && <p class="disclaimer">{d.disclaimer}</p>}
+  </div>
+</section>
+
+<style>
+  .case { padding: 24px; background: #fff; display: flex; flex-direction: column; gap: 10px; }
+  .case h3 { font-size: 1.2rem; margin: 6px 0 0; }
+  .case p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  .tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags li { font-size: 0.78rem; font-weight: 700; padding: 3px 10px; border: 2px solid var(--ink); border-radius: 999px; background: var(--bg); }
+  .empty { border-style: dashed; background: transparent; box-shadow: none; color: var(--ink); text-decoration: none; justify-content: center; align-items: flex-start; transition: background 0.15s, box-shadow 0.15s, transform 0.15s; }
+  .empty:hover { background: var(--pop); box-shadow: var(--shadow); border-style: solid; }
+  .plus { width: 44px; height: 44px; display: grid; place-items: center; border: 2px solid var(--ink); border-radius: 50%; font-size: 1.6rem; font-weight: 700; background: #fff; }
+  .arrow { font-size: 1.5rem; font-weight: 700; margin-top: auto; }
+  .disclaimer { margin: 28px 0 0; font-size: 0.9rem; color: var(--muted); background: #fff; border: 2px solid var(--ink); border-radius: 12px; padding: 12px 16px; display: inline-block; }
+</style>

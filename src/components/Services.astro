@@ -1,0 +1,43 @@
+---
+import { f } from '../lib/content';
+const d = f('services');
+const cards = d.cards ?? [];
+const sectors = (d.sectors ?? []).filter(Boolean);
+---
+<section id="services" class="section">
+  <div class="container">
+    <header class="head">
+      {d.eyebrow && <p class="eyebrow">{d.eyebrow}</p>}
+      {d.title && <h2>{d.title}</h2>}
+      {d.intro && <p class="lead">{d.intro}</p>}
+    </header>
+    <div class="grid-3">
+      {cards.map((c: any, i: number) => (
+        <article class="card svc">
+          <span class="num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+          <h3>{c.title}</h3>
+          <p>{c.text}</p>
+        </article>
+      ))}
+    </div>
+    {d.extra && <p class="extra">{d.extra}</p>}
+    {sectors.length > 0 && (
+      <div class="for">
+        {d.forLabel && <p class="for-label">{d.forLabel}</p>}
+        <ul class="chips">{sectors.map((s: string) => <li>{s}</li>)}</ul>
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .svc { padding: 28px; background: #fff; }
+  .svc:nth-child(2) { background: var(--pop); }
+  .num { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; border: 2px solid var(--ink); background: var(--accent); color: #fff; font-family: var(--font-display); font-weight: 800; margin-bottom: 18px; }
+  .svc h3 { font-size: 1.35rem; margin: 0 0 10px; }
+  .svc p { margin: 0; color: var(--muted); }
+  .svc:nth-child(2) p { color: var(--ink); }
+  .extra { margin: 32px 0 0; padding: 16px 20px; border: 2px dashed var(--ink); border-radius: var(--radius); color: var(--muted); }
+  .for { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+  .for-label { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; }
+</style>
