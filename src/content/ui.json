@@ -39,9 +39,6 @@
     ],
     "Notion": [
       "notion"
-    ],
-    "Supabase": [
-      "supabase"
     ]
   }
 }

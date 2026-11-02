@@ -26,31 +26,31 @@
       "f": {
         "badge": "Audit offert",
         "cta1": "Prendre rendez-vous",
-        "cta2": "Calculer mes heures perdues",
-        "eyebrow": "Automatisation IA · TPE & PME · ",
-        "flowTitle": "Nouvelle demande · il y a 2 min",
-        "hl": "Plus d'ambition.",
+        "cta2": "Comment se passe l'audit",
+        "eyebrow": "Automatisation IA · Agences immobilières & conciergeries · ",
+        "flowTitle": "Demande via un portail · il y a 2 min",
+        "hl": "Plus de biens gérés.",
         "reassure": "30 minutes · sans engagement · le compte rendu d'audit vous reste",
         "steps": [
           {
-            "text": "« Bonjour, possible d'avoir un devis et un passage jeudi ? »",
-            "title": "Formulaire de contact"
+            "title": "Message reçu",
+            "text": "« Bonjour, le T3 est-il toujours disponible ? Une visite samedi serait possible ? »"
           },
           {
-            "text": "Demande de devis · prioritaire · coordonnées complètes",
-            "title": "Triée par l'IA"
+            "title": "Triée par l'IA",
+            "text": "Demande de visite · prioritaire · bien identifié"
           },
           {
-            "text": "Sans ressaisie, avec l'historique du client",
-            "title": "Fiche créée dans votre CRM"
+            "title": "Fiche contact créée",
+            "text": "Sans ressaisie, rattachée au bien concerné"
           },
           {
-            "text": "Créneau pris dans votre agenda",
-            "title": "Rendez-vous proposé jeudi 10 h"
+            "title": "Visite proposée samedi 10 h",
+            "text": "Créneau pris dans l'agenda du négociateur"
           }
         ],
-        "sub": "On branche l'IA sur les outils que vous utilisez déjà : chaque demande client reçoit une réponse, chaque devis est relancé, chaque rendez-vous se cale tout seul. Sans changer vos habitudes.",
-        "t1": "Moins d'opérations.",
+        "sub": "On branche l'IA sur les outils que vous utilisez déjà : chaque demande d'acquéreur, de locataire ou de voyageur reçoit une réponse, chaque visite ou arrivée se planifie, chaque propriétaire est tenu informé. Sans changer vos habitudes.",
+        "t1": "Moins d'administratif.",
         "t2": ""
       },
       "id": "hero",
@@ -65,8 +65,7 @@
           "WhatsApp",
           "Google Sheets",
           "Notion",
-          "Supabase",
-          ""
+          "Votre logiciel de gestion"
         ],
         "label": "Branché sur vos outils"
       },
@@ -78,31 +77,29 @@
       "f": {
         "cards": [
           {
-            "text": "E-mails, formulaires, messages : chaque demande reçoit une réponse personnalisée, est triée et atterrit dans votre CRM, même le dimanche soir.",
-            "title": "Demandes traitées en minutes"
+            "title": "Chaque contact répondu en minutes",
+            "text": "Demandes venues des portails, messages de voyageurs, questions de propriétaires : chaque message reçoit une réponse, est trié et atterrit au bon endroit, même le dimanche soir."
           },
           {
-            "text": "Devis sans réponse, factures en retard, clients à recontacter : le bon message part au bon moment, signé de votre nom.",
-            "title": "Devis et relances qui partent seuls"
+            "title": "Visites, arrivées et ménages planifiés",
+            "text": "Créneaux de visite proposés aux acquéreurs, consignes d'arrivée envoyées aux voyageurs, équipe de ménage prévenue après chaque départ. Vous ne voyez que l'agenda à jour."
           },
           {
-            "text": "Votre client choisit un créneau libre, reçoit confirmation et rappel. Vous, vous voyez juste le rendez-vous dans l'agenda.",
-            "title": "Rendez-vous calés sans téléphone"
+            "title": "Propriétaires et relances suivis",
+            "text": "Compte rendu régulier aux propriétaires, relance des acquéreurs et des estimations restées sans suite, demande d'avis après un séjour ou une signature : le bon message part au bon moment."
           }
         ],
-        "extra": "Aussi : avis Google, saisie de données, assistant IA pour vos équipes, centralisation entre vos logiciels, reporting hebdo.",
+        "extra": "Aussi : saisie des fiches biens, documents de location à rassembler, assistant IA pour votre équipe, reporting hebdomadaire.",
         "eyebrow": "Ce qu'on automatise",
         "forLabel": "Pour qui",
         "intro": "On commence toujours par la tâche qui vous coûte le plus d'heures. Une à la fois, chiffrée avant d'être construite.",
         "sectors": [
-          "Artisans & bâtiment",
-          "Garages",
-          "Cabinets",
           "Agences immobilières",
-          "Commerces",
-          "Services B2B"
+          "Régies & gestion locative",
+          "Conciergeries Airbnb",
+          "Gestion de locations courte durée"
         ],
-        "title": "Les trois fuites de temps de toute petite entreprise"
+        "title": "Les trois fuites de temps d'une agence ou d'une conciergerie"
       },
       "id": "services",
       "note": "",
@@ -112,25 +109,25 @@
       "f": {
         "cards": [
           {
-            "tags": "E-mails, Assistant IA",
-            "text": "Réponse aux demandes entrantes, tri par priorité, création de la fiche contact.",
-            "title": "Le standard qui ne dort jamais"
+            "tags": "Agence, Portails, Agenda",
+            "title": "Le standard des annonces",
+            "text": "Réponse aux demandes reçues des portails, qualification de l'acquéreur ou du locataire, proposition de créneaux de visite."
           },
           {
-            "tags": "Relances, Devis",
-            "text": "Suivi automatique des devis envoyés jusqu'à la signature.",
-            "title": "Le relanceur de devis"
+            "tags": "Conciergerie, Voyageurs, WhatsApp",
+            "title": "L'assistant voyageurs",
+            "text": "Réponses aux questions répétitives (accès, wifi, horaires), consignes avant l'arrivée, tout imprévu remonté à un humain."
           },
           {
-            "tags": "Agenda, SMS / e-mail",
-            "text": "Créneaux proposés, confirmations, rappels, puis demande d'avis Google après le rendez-vous.",
-            "title": "L'agenda en libre-service"
+            "tags": "Propriétaires, Reporting",
+            "title": "Le compte rendu propriétaire",
+            "text": "Point régulier envoyé à chaque propriétaire : visites, réservations, interventions, sans le rédiger à la main."
           }
         ],
         "disclaimer": "Systèmes types décrivant le fonctionnement de nos automatisations. Ce ne sont pas des références clients.",
         "emptyCard": "Votre entreprise ici",
         "eyebrow": "Cas d'usage",
-        "title": "Trois systèmes, prêts à adapter à votre entreprise"
+        "title": "Trois systèmes, prêts à adapter à votre activité"
       },
       "id": "cas",
       "note": "",
@@ -173,7 +170,7 @@
             "sub": "1 automatisation · livrée en 1 semaine"
           },
           {
-            "items": "Demandes, devis et rendez-vous couverts\nCorrection sous 1 jour ouvré\nPoint de suivi à 30 jours",
+            "items": "Demandes, visites ou arrivées, et relances couvertes\nCorrection sous 1 jour ouvré\nPoint de suivi à 30 jours",
             "limit": "Pas de nouvelles automatisations après livraison.",
             "name": "Croissance",
             "price": "",
@@ -204,7 +201,7 @@
             "title": "Audit (30 min)"
           },
           {
-            "text": "On construit sur vos outils, on teste sur vos vrais dossiers, vous validez avant la mise en route.",
+            "text": "On construit sur vos outils, on teste sur vos vrais biens et vos vrais messages, vous validez avant la mise en route.",
             "title": "Construction"
           },
           {
@@ -231,10 +228,10 @@
     },
     {
       "f": {
-        "cta": "Faire mon audit gratuit →",
-        "eyebrow": "Audit gratuit · 3 minutes",
-        "text": "8 questions sur vos demandes clients, vos devis et vos rendez-vous. Vous recevez une estimation des heures récupérables et les deux premières tâches à automatiser.",
-        "title": "Combien d'heures votre entreprise perd-elle chaque semaine ?"
+        "cta": "Réserver mon audit →",
+        "eyebrow": "Audit offert · 30 minutes",
+        "text": "En 30 minutes, on passe en revue vos demandes entrantes, vos visites ou arrivées et le suivi de vos propriétaires. Vous repartez avec une estimation des heures récupérables et les deux premières tâches à automatiser.",
+        "title": "Combien d'heures votre équipe perd-elle chaque semaine ?"
       },
       "id": "audit",
       "note": "",
@@ -245,28 +242,28 @@
         "eyebrow": "FAQ",
         "items": [
           {
-            "a": "Non. On se branche sur ce que vous utilisez. Si un outil ne permet aucune connexion, on vous le dit dès l'audit.",
-            "q": "Faut-il changer de logiciels ?"
+            "q": "Faut-il changer de logiciels ?",
+            "a": "Non. On se branche sur ce que vous utilisez. Si un outil ne permet aucune connexion, on vous le dit dès l'audit."
           },
           {
-            "a": "Elle répond aux questions simples et prépare le terrain. Tout ce qui engage l'entreprise (prix, devis, réclamation) remonte à un humain.",
-            "q": "L'IA va-t-elle répondre à la place de mon équipe ?"
+            "q": "Vous connectez-vous aux portails et à Airbnb ?",
+            "a": "Les portails transmettent les demandes par e-mail : on part de là. Pour les plateformes de location courte durée, on passe par votre outil de gestion ou vos notifications, selon ce qu'ils permettent. On le vérifie pendant l'audit, avant tout engagement."
           },
           {
-            "a": "Une semaine pour une première automatisation, deux à trois pour un ensemble complet.",
-            "q": "Combien de temps avant que ça tourne ?"
+            "q": "L'IA va-t-elle répondre à mes clients et voyageurs à ma place ?",
+            "a": "Elle répond aux questions simples et prépare le terrain. Tout ce qui engage votre activité (prix, offre, litige, imprévu dans un logement) remonte à un humain."
           },
           {
-            "a": "Le suivi mensuel inclut la surveillance et la correction, avec un délai défini dans chaque formule.",
-            "q": "Que se passe-t-il si une automatisation casse ?"
+            "q": "Combien de temps avant que ça tourne ?",
+            "a": "Une semaine pour une première automatisation, deux à trois pour un ensemble complet."
           },
           {
-            "a": "Si votre équipe refait les mêmes tâches chaque semaine (répondre, saisir, relancer, planifier), oui. L'audit le confirme en 30 minutes.",
-            "q": "Mon secteur est-il concerné ?"
+            "q": "Que se passe-t-il si une automatisation casse ?",
+            "a": "Le suivi mensuel inclut la surveillance et la correction, avec un délai défini dans chaque formule."
           },
           {
-            "a": "Oui, à distance partout en France. Sur place dans la métropole lyonnaise.",
-            "q": "Intervenez-vous hors de Lyon ?"
+            "q": "Intervenez-vous hors de Lyon ?",
+            "a": "Oui. Tout se fait à distance, partout en France. Rendez-vous sur place possible dans la métropole lyonnaise."
           }
         ],
         "title": "Vos questions, nos réponses"
@@ -279,8 +276,8 @@
       "f": {
         "cal": "https://calendly.com/soline-system/30min",
         "cta": "Choisir un créneau",
-        "text": "30 minutes pour repérer ce qui vous fait perdre le plus de temps. Sans engagement, sans discours commercial.",
-        "title": "Parlons de votre entreprise"
+        "text": "30 minutes pour repérer ce qui fait perdre le plus de temps à votre agence ou votre conciergerie. Sans engagement, sans discours commercial.",
+        "title": "Parlons de votre activité"
       },
       "id": "rdv",
       "note": "",
@@ -292,7 +289,7 @@
         "email": "soline.systems@gmail.com",
         "phone": "+33 6 52 14 47 89",
         "siret": "",
-        "tagline": "Automatisation IA pour les TPE et PME. "
+        "tagline": "Automatisation IA pour agences immobilières et conciergeries."
       },
       "id": "footer",
       "note": "",
