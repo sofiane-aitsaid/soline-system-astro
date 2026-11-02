@@ -13,6 +13,8 @@ const iconFor = (slug: string) => {
   const key = 'si' + slug.charAt(0).toUpperCase() + slug.slice(1);
   return (simpleIcons as Record<string, any>)[key] ?? null;
 };
+// Vitesse de défilement constante quel que soit le nombre d'outils (6 outils = 28 s).
+const duration = `${Math.max(28, Math.round(items.length * 4.7))}s`;
 const tools = items.map((name) => ({
   name,
   icons: (logosByName[name] ?? []).map(iconFor).filter(Boolean),
@@ -24,7 +26,7 @@ const tools = items.map((name) => ({
       {d.label && <p class="label">{d.label}</p>}
     </div>
     <div class="marquee">
-      <div class="track">
+      <div class="track" style={`--dur:${duration}`}>
         {[0, 1].map((copy) => (
           <ul aria-hidden={copy === 1 ? 'true' : undefined}>
             {tools.map((t) => (
@@ -46,7 +48,7 @@ const tools = items.map((name) => ({
   .outils { background: var(--ink); color: #fff; padding: 22px 0 24px; border-bottom: 2px solid var(--ink); overflow: hidden; }
   .label { margin: 0 0 14px; font-weight: 700; color: var(--pop); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; }
   .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-  .track { display: flex; width: max-content; animation: defile 28s linear infinite; }
+  .track { display: flex; width: max-content; animation: defile var(--dur, 28s) linear infinite; }
   .marquee:hover .track { animation-play-state: paused; }
   ul { list-style: none; display: flex; gap: 14px; margin: 0; padding: 4px 14px 8px 0; }
   li { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; background: #fff; color: var(--ink); border: 2px solid var(--ink); border-radius: 999px; padding: 8px 18px 8px 12px; font-weight: 700; font-size: 0.95rem; box-shadow: 3px 3px 0 var(--pop); }

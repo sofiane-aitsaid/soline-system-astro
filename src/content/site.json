@@ -60,12 +60,18 @@
     {
       "f": {
         "items": [
+          "Hostaway",
+          "Smoobu",
+          "Lodgify",
+          "SuperHote",
+          "Guesty",
+          "Beds24",
           "Gmail / Outlook",
           "Google Calendar",
           "WhatsApp",
           "Google Sheets",
           "Notion",
-          "Votre logiciel de gestion"
+          "Votre logiciel immobilier"
         ],
         "label": "Branché sur vos outils"
       },
