@@ -30,26 +30,26 @@
         "eyebrow": "Automatisation IA · Agences immobilières & conciergeries · ",
         "flowTitle": "Demande via un portail · il y a 2 min",
         "hl": "Plus d'ambition.",
-        "reassure": "30 minutes · sans engagement · le compte rendu d'audit vous reste",
+        "reassure": "30 min · sans engagement",
         "steps": [
           {
             "title": "Message reçu",
-            "text": "« Bonjour, le T3 est-il toujours disponible ? Une visite samedi serait possible ? »"
+            "text": "« Le T3 est-il dispo ? Visite samedi ? »"
           },
           {
             "title": "Triée par l'IA",
-            "text": "Demande de visite · prioritaire · bien identifié"
+            "text": "Visite · prioritaire · bien identifié"
           },
           {
             "title": "Fiche contact créée",
-            "text": "Sans ressaisie, rattachée au bien concerné"
+            "text": "Sans ressaisie"
           },
           {
             "title": "Visite proposée samedi 10 h",
-            "text": "Créneau pris dans l'agenda du négociateur"
+            "text": "Ajoutée à l'agenda"
           }
         ],
-        "sub": "On branche l'IA sur les outils que vous utilisez déjà : chaque demande d'acquéreur, de locataire ou de voyageur reçoit une réponse, chaque visite ou arrivée se planifie, chaque propriétaire est tenu informé. Sans changer vos habitudes.",
+        "sub": "L'IA branchée sur vos outils : chaque demande reçoit une réponse, chaque visite ou arrivée se planifie toute seule.",
         "t1": "Moins d'opérations.",
         "t2": ""
       },
@@ -84,21 +84,21 @@
         "cards": [
           {
             "title": "Chaque contact répondu en minutes",
-            "text": "Demandes venues des portails, messages de voyageurs, questions de propriétaires : chaque message reçoit une réponse, est trié et atterrit au bon endroit, même le dimanche soir."
+            "text": "Portails, voyageurs, propriétaires : chaque message est répondu et trié, même le dimanche."
           },
           {
             "title": "Visites, arrivées et ménages planifiés",
-            "text": "Créneaux de visite proposés aux acquéreurs, consignes d'arrivée envoyées aux voyageurs, équipe de ménage prévenue après chaque départ. Vous ne voyez que l'agenda à jour."
+            "text": "Créneaux de visite, consignes d'arrivée, équipe de ménage prévenue. Automatiquement."
           },
           {
             "title": "Propriétaires et relances suivis",
-            "text": "Compte rendu régulier aux propriétaires, relance des acquéreurs et des estimations restées sans suite, demande d'avis après un séjour ou une signature : le bon message part au bon moment."
+            "text": "Compte rendu aux propriétaires, relances et demandes d'avis envoyés au bon moment."
           }
         ],
-        "extra": "Aussi : saisie des fiches biens, documents de location à rassembler, assistant IA pour votre équipe, reporting hebdomadaire.",
+        "extra": "Aussi : saisie des fiches biens, assistant IA pour votre équipe, reporting.",
         "eyebrow": "Ce qu'on automatise",
         "forLabel": "Pour qui",
-        "intro": "On commence toujours par la tâche qui vous coûte le plus d'heures. Une à la fois, chiffrée avant d'être construite.",
+        "intro": "",
         "sectors": [
           "Agences immobilières",
           "Régies & gestion locative",
@@ -115,22 +115,22 @@
       "f": {
         "cards": [
           {
-            "tags": "Agence, Portails, Agenda",
+            "tags": "Agence, Portails",
             "title": "Le standard des annonces",
-            "text": "Réponse aux demandes reçues des portails, qualification de l'acquéreur ou du locataire, proposition de créneaux de visite."
+            "text": "Répond aux demandes des portails et propose des visites."
           },
           {
-            "tags": "Conciergerie, Voyageurs, WhatsApp",
+            "tags": "Conciergerie, WhatsApp",
             "title": "L'assistant voyageurs",
-            "text": "Réponses aux questions répétitives (accès, wifi, horaires), consignes avant l'arrivée, tout imprévu remonté à un humain."
+            "text": "Répond aux questions répétitives, remonte les imprévus."
           },
           {
-            "tags": "Propriétaires, Reporting",
+            "tags": "Propriétaires",
             "title": "Le compte rendu propriétaire",
-            "text": "Point régulier envoyé à chaque propriétaire : visites, réservations, interventions, sans le rédiger à la main."
+            "text": "Un point régulier envoyé sans rien rédiger."
           }
         ],
-        "disclaimer": "Systèmes types décrivant le fonctionnement de nos automatisations. Ce ne sont pas des références clients.",
+        "disclaimer": "Exemples types, pas des références clients.",
         "emptyCard": "Votre entreprise ici",
         "eyebrow": "Cas d'usage",
         "title": "Trois systèmes, prêts à adapter à votre activité"
@@ -144,7 +144,7 @@
         "eyebrow": "Nos engagements",
         "items": [
           {
-            "text": "On se branche sur ce que vous utilisez déjà. Chaque automatisation est livrée documentée.",
+            "text": "On se branche sur l'existant. Tout est documenté.",
             "title": "Vos outils restent les vôtres"
           },
           {
@@ -152,7 +152,7 @@
             "title": "Données de vos clients protégées"
           },
           {
-            "text": "L'audit mesure les heures perdues. Si le gain ne couvre pas le prix, on vous le dit.",
+            "text": "Si le gain ne couvre pas le prix, on vous le dit.",
             "title": "Le gain chiffré avant de payer"
           }
         ],
@@ -203,16 +203,16 @@
         "eyebrow": "Méthode",
         "steps": [
           {
-            "text": "On liste vos tâches répétitives et on chiffre les heures perdues. Le compte rendu vous reste.",
-            "title": "Audit (30 min)"
+            "title": "Audit (30 min)",
+            "text": "On chiffre les heures perdues."
           },
           {
-            "text": "On construit sur vos outils, on teste sur vos vrais biens et vos vrais messages, vous validez avant la mise en route.",
-            "title": "Construction"
+            "title": "Construction",
+            "text": "On construit sur vos outils, vous validez."
           },
           {
-            "text": "On surveille, on corrige, on mesure le temps réellement gagné le premier mois.",
-            "title": "Suivi"
+            "title": "Suivi",
+            "text": "On surveille, on corrige, on mesure le gain."
           }
         ],
         "title": "De l'appel à l'automatisation en ligne"
@@ -225,7 +225,7 @@
       "f": {
         "eyebrow": "Un interlocuteur, pas un call center",
         "stack": "n8n  · API · Claude · Airtable · Google Calendar · Hermes Agent",
-        "text": "Je construis vos automatisations moi-même, sur n8n. Vous avez mon numéro, et c'est moi qui réponds. ",
+        "text": "Je construis vos automatisations moi-même. Vous avez mon numéro.",
         "title": "Sofiane, fondateur de Soline System"
       },
       "id": "fondateur",
@@ -236,7 +236,7 @@
       "f": {
         "cta": "Réserver mon audit →",
         "eyebrow": "Audit offert · 30 minutes",
-        "text": "En 30 minutes, on passe en revue vos demandes entrantes, vos visites ou arrivées et le suivi de vos propriétaires. Vous repartez avec une estimation des heures récupérables et les deux premières tâches à automatiser.",
+        "text": "On repère vos tâches répétitives et les deux premières à automatiser.",
         "title": "Combien d'heures votre équipe perd-elle chaque semaine ?"
       },
       "id": "audit",
@@ -249,27 +249,23 @@
         "items": [
           {
             "q": "Faut-il changer de logiciels ?",
-            "a": "Non. On se branche sur ce que vous utilisez. Si un outil ne permet aucune connexion, on vous le dit dès l'audit."
+            "a": "Non. On se branche sur ce que vous utilisez déjà."
           },
           {
-            "q": "Vous connectez-vous aux portails et à Airbnb ?",
-            "a": "Les portails transmettent les demandes par e-mail : on part de là. Pour les plateformes de location courte durée, on passe par votre outil de gestion ou vos notifications, selon ce qu'ils permettent. On le vérifie pendant l'audit, avant tout engagement."
+            "q": "Vous connectez-vous à Airbnb et aux portails ?",
+            "a": "Oui, via votre logiciel de gestion ou vos e-mails. On le vérifie pendant l'audit."
           },
           {
-            "q": "L'IA va-t-elle répondre à mes clients et voyageurs à ma place ?",
-            "a": "Elle répond aux questions simples et prépare le terrain. Tout ce qui engage votre activité (prix, offre, litige, imprévu dans un logement) remonte à un humain."
+            "q": "L'IA répond-elle à ma place ?",
+            "a": "Aux questions simples. Prix, litiges et imprévus remontent à un humain."
           },
           {
             "q": "Combien de temps avant que ça tourne ?",
-            "a": "Une semaine pour une première automatisation, deux à trois pour un ensemble complet."
-          },
-          {
-            "q": "Que se passe-t-il si une automatisation casse ?",
-            "a": "Le suivi mensuel inclut la surveillance et la correction, avec un délai défini dans chaque formule."
+            "a": "Une semaine pour une première automatisation."
           },
           {
             "q": "Intervenez-vous hors de Lyon ?",
-            "a": "Oui. Tout se fait à distance, partout en France. Rendez-vous sur place possible dans la métropole lyonnaise."
+            "a": "Oui, à distance partout en France."
           }
         ],
         "title": "Vos questions, nos réponses"
@@ -282,7 +278,7 @@
       "f": {
         "cal": "https://calendly.com/soline-system/30min",
         "cta": "Choisir un créneau",
-        "text": "30 minutes pour repérer ce qui fait perdre le plus de temps à votre agence ou votre conciergerie. Sans engagement, sans discours commercial.",
+        "text": "30 minutes, sans engagement.",
         "title": "Parlons de votre activité"
       },
       "id": "rdv",
