@@ -27,29 +27,29 @@
         "badge": "Audit offert",
         "cta1": "Prendre rendez-vous",
         "cta2": "Comment se passe l'audit",
-        "eyebrow": "Automatisation IA · Agences immobilières & conciergeries · ",
-        "flowTitle": "Demande via un portail · il y a 2 min",
+        "eyebrow": "Automatisation IA · TPE & PME · ",
+        "flowTitle": "Demande de devis · il y a 2 min",
         "hl": "Plus d'ambition.",
         "reassure": "30 min · sans engagement",
         "steps": [
           {
             "title": "Message reçu",
-            "text": "« Le T3 est-il dispo ? Visite samedi ? »"
+            "text": "« Un devis pour ma salle de bain ? »"
           },
           {
             "title": "Triée par l'IA",
-            "text": "Visite · prioritaire · bien identifié"
+            "text": "Devis · prioritaire · nouveau client"
           },
           {
-            "title": "Fiche contact créée",
+            "title": "Fiche client créée",
             "text": "Sans ressaisie"
           },
           {
-            "title": "Visite proposée samedi 10 h",
-            "text": "Ajoutée à l'agenda"
+            "title": "Rendez-vous proposé jeudi 10 h",
+            "text": "Ajouté à l'agenda"
           }
         ],
-        "sub": "L'IA branchée sur vos outils : chaque demande reçoit une réponse, chaque visite ou arrivée se planifie toute seule.",
+        "sub": "L'IA branchée sur vos outils : chaque demande reçoit une réponse, chaque rendez-vous se planifie, chaque relance part toute seule.",
         "t1": "Moins d'opérations.",
         "t2": ""
       },
@@ -60,18 +60,14 @@
     {
       "f": {
         "items": [
-          "Hostaway",
-          "Smoobu",
-          "Lodgify",
-          "SuperHote",
-          "Guesty",
-          "Beds24",
           "Gmail / Outlook",
           "Google Calendar",
           "WhatsApp",
           "Google Sheets",
           "Notion",
-          "Votre logiciel immobilier"
+          "Airtable",
+          "Votre CRM",
+          "Votre logiciel métier"
         ],
         "label": "Branché sur vos outils"
       },
@@ -83,29 +79,32 @@
       "f": {
         "cards": [
           {
-            "title": "Chaque contact répondu en minutes",
-            "text": "Portails, voyageurs, propriétaires : chaque message est répondu et trié, même le dimanche."
+            "title": "Chaque demande répondue en minutes",
+            "text": "E-mails, formulaires, WhatsApp : chaque message est répondu et trié, même le dimanche."
           },
           {
-            "title": "Visites, arrivées et ménages planifiés",
-            "text": "Créneaux de visite, consignes d'arrivée, équipe de ménage prévenue. Automatiquement."
+            "title": "Rendez-vous et devis sans aller-retour",
+            "text": "Créneaux proposés, rappels envoyés, devis préparés à partir de vos tarifs."
           },
           {
-            "title": "Propriétaires et relances suivis",
-            "text": "Compte rendu aux propriétaires, relances et demandes d'avis envoyés au bon moment."
+            "title": "Relances et suivi au bon moment",
+            "text": "Devis sans réponse, factures impayées, demandes d'avis : relancés automatiquement."
           }
         ],
-        "extra": "Aussi : saisie des fiches biens, assistant IA pour votre équipe, reporting.",
+        "extra": "Aussi : saisie de données, centralisation entre vos logiciels, assistant IA pour votre équipe, reporting.",
         "eyebrow": "Ce qu'on automatise",
         "forLabel": "Pour qui",
         "intro": "",
         "sectors": [
-          "Agences immobilières",
-          "Régies & gestion locative",
-          "Conciergeries Airbnb",
-          "Gestion de locations courte durée"
+          "Artisans & bâtiment",
+          "Garages",
+          "Agences immobilières & régies",
+          "Conciergeries & location courte durée",
+          "Cabinets & professions libérales",
+          "Commerces & restaurants",
+          "Entreprises de services"
         ],
-        "title": "Les trois fuites de temps d'une agence ou d'une conciergerie"
+        "title": "Les trois fuites de temps d'une petite entreprise"
       },
       "id": "services",
       "note": "",
@@ -114,6 +113,16 @@
     {
       "f": {
         "cards": [
+          {
+            "tags": "Artisans, Devis",
+            "title": "La relance de devis",
+            "text": "Relance les devis sans réponse et vous prévient quand le client accepte."
+          },
+          {
+            "tags": "Garage, SMS",
+            "title": "Le suivi atelier",
+            "text": "Confirme le rendez-vous, rappelle la veille, prévient quand le véhicule est prêt."
+          },
           {
             "tags": "Agence, Portails",
             "title": "Le standard des annonces",
@@ -125,15 +134,25 @@
             "text": "Répond aux questions répétitives, remonte les imprévus."
           },
           {
-            "tags": "Propriétaires",
-            "title": "Le compte rendu propriétaire",
-            "text": "Un point régulier envoyé sans rien rédiger."
+            "tags": "Cabinet, E-mails",
+            "title": "Le tri de la boîte mail",
+            "text": "Classe les e-mails, prépare les réponses, signale l'urgent."
+          },
+          {
+            "tags": "Commerce, Avis Google",
+            "title": "La demande d'avis",
+            "text": "Invite chaque client à laisser un avis et vous alerte sur un avis négatif."
+          },
+          {
+            "tags": "Toutes activités, Équipe",
+            "title": "L'assistant interne",
+            "text": "Répond à votre équipe à partir de vos procédures et de vos tarifs."
           }
         ],
         "disclaimer": "Exemples types, pas des références clients.",
         "emptyCard": "Votre entreprise ici",
         "eyebrow": "Cas d'usage",
-        "title": "Trois systèmes, prêts à adapter à votre activité"
+        "title": "Des systèmes types, adaptés à votre métier"
       },
       "id": "cas",
       "note": "",
@@ -176,7 +195,7 @@
             "sub": "1 automatisation · livrée en 1 semaine"
           },
           {
-            "items": "Demandes, visites ou arrivées, et relances couvertes\nCorrection sous 1 jour ouvré\nPoint de suivi à 30 jours",
+            "items": "Demandes clients, rendez-vous et relances couverts\nCorrection sous 1 jour ouvré\nPoint de suivi à 30 jours",
             "limit": "Pas de nouvelles automatisations après livraison.",
             "name": "Croissance",
             "price": "",
@@ -248,12 +267,16 @@
         "eyebrow": "FAQ",
         "items": [
           {
+            "q": "Quels métiers accompagnez-vous ?",
+            "a": "Toute entreprise qui refait les mêmes tâches chaque semaine : artisans, garages, agences, conciergeries, cabinets, commerces."
+          },
+          {
             "q": "Faut-il changer de logiciels ?",
             "a": "Non. On se branche sur ce que vous utilisez déjà."
           },
           {
-            "q": "Vous connectez-vous à Airbnb et aux portails ?",
-            "a": "Oui, via votre logiciel de gestion ou vos e-mails. On le vérifie pendant l'audit."
+            "q": "Mon logiciel métier est très spécifique, ça marche ?",
+            "a": "Souvent oui, via ses e-mails, ses exports ou son API. On le vérifie pendant l'audit, avant tout devis."
           },
           {
             "q": "L'IA répond-elle à ma place ?",
@@ -291,7 +314,7 @@
         "email": "soline.systems@gmail.com",
         "phone": "+33 6 52 14 47 89",
         "siret": "",
-        "tagline": "Automatisation IA pour agences immobilières et conciergeries."
+        "tagline": "Automatisation IA pour TPE et PME."
       },
       "id": "footer",
       "note": "",
